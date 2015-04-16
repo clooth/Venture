@@ -11,21 +11,21 @@ import Foundation
 public class Requirement: NSObject {
     /// The name of the Requirement
     /// Think: "Gameplay", "Usability", "Ambient Music"
-    var name: String
+    private(set) public var name: String
     
     /// The matching `Skill` object
-    var matchingSkill: Skill?
+    private(set) public var matchingSkill: Skill?
     
     // MARK: Points
     
     /// The current amount of points gathered
-    var gatheredPoints: Int = 0
+    public var gatheredPoints: Int = 0
     
     /// The amount of points required for this `Requirement` to be considered satisfied
-    var requiredPoints: Int = 0
+    private(set) public var requiredPoints: Int = 0
     
     /// Checks whether or not our requirement has been satisfied
-    var satisfied: Bool {
+    public var satisfied: Bool {
         return gatheredPoints >= requiredPoints
     }
     
@@ -37,9 +37,9 @@ public class Requirement: NSObject {
     /// :param: requiredPoints The amount of points required
     ///
     /// :returns: The newly created instance
-    init(name: String, requiredPoints: Int) {
+    public init(name: String, requiredPoints: Int) {
         self.name = name
-        self.requiredPoints = requiredPoints
+        self.requiredPoints = abs(requiredPoints)
     }
     
     // MARK: Points
@@ -50,7 +50,7 @@ public class Requirement: NSObject {
     ///
     ///  :returns: The number of points added
     public func addPoints(amount: Int) -> Int {
-        gatheredPoints = min(amount + gatheredPoints, requiredPoints)
+        gatheredPoints = min(abs(amount) + gatheredPoints, requiredPoints)
         return requiredPoints - gatheredPoints
     }
 }

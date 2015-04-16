@@ -10,7 +10,7 @@
 		6F8B4F281ADE914B00884FF7 /* Venture.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8B4F271ADE914B00884FF7 /* Venture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F8B4F2E1ADE914B00884FF7 /* Venture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B4F221ADE914B00884FF7 /* Venture.framework */; };
 		6F8B4F351ADE914B00884FF7 /* VentureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F341ADE914B00884FF7 /* VentureTests.swift */; };
-		6F8B4F3F1ADE916500884FF7 /* Venture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F3E1ADE916500884FF7 /* Venture.swift */; };
+		6F8B4F3F1ADE916500884FF7 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F3E1ADE916500884FF7 /* Game.swift */; };
 		6F8B4F791ADE9E4C00884FF7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F731ADE9E4C00884FF7 /* Character.swift */; };
 		6F8B4F7A1ADE9E4C00884FF7 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F741ADE9E4C00884FF7 /* Company.swift */; };
 		6F8B4F7B1ADE9E4C00884FF7 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F751ADE9E4C00884FF7 /* Contract.swift */; };
@@ -19,6 +19,10 @@
 		6F8B4F7E1ADE9E4C00884FF7 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F781ADE9E4C00884FF7 /* Skill.swift */; };
 		6F8B4F821ADE9E9400884FF7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F811ADE9E9400884FF7 /* Time.swift */; };
 		6F8B4F841ADE9EF300884FF7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F831ADE9EF300884FF7 /* Functions.swift */; };
+		6F8B4F871ADECB7600884FF7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B4F851ADECB7600884FF7 /* Nimble.framework */; };
+		6F8B4F881ADECB7600884FF7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B4F861ADECB7600884FF7 /* Quick.framework */; };
+		6F8B4F8E1ADECCAC00884FF7 /* FunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F8D1ADECCAC00884FF7 /* FunctionsSpec.swift */; };
+		6F8B4F901ADECDE300884FF7 /* RequirementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F8F1ADECDE300884FF7 /* RequirementSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		6F8B4F2D1ADE914B00884FF7 /* VentureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VentureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B4F331ADE914B00884FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8B4F341ADE914B00884FF7 /* VentureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentureTests.swift; sourceTree = "<group>"; };
-		6F8B4F3E1ADE916500884FF7 /* Venture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venture.swift; sourceTree = "<group>"; };
+		6F8B4F3E1ADE916500884FF7 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		6F8B4F731ADE9E4C00884FF7 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		6F8B4F741ADE9E4C00884FF7 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		6F8B4F751ADE9E4C00884FF7 /* Contract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		6F8B4F781ADE9E4C00884FF7 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		6F8B4F811ADE9E9400884FF7 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		6F8B4F831ADE9EF300884FF7 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		6F8B4F851ADECB7600884FF7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		6F8B4F861ADECB7600884FF7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		6F8B4F8D1ADECCAC00884FF7 /* FunctionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsSpec.swift; sourceTree = "<group>"; };
+		6F8B4F8F1ADECDE300884FF7 /* RequirementSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequirementSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8B4F2E1ADE914B00884FF7 /* Venture.framework in Frameworks */,
+				6F8B4F871ADECB7600884FF7 /* Nimble.framework in Frameworks */,
+				6F8B4F881ADECB7600884FF7 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +83,7 @@
 			children = (
 				6F8B4F241ADE914B00884FF7 /* Venture */,
 				6F8B4F311ADE914B00884FF7 /* VentureTests */,
+				6F8B4F891ADECB7A00884FF7 /* Frameworks */,
 				6F8B4F231ADE914B00884FF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +118,8 @@
 		6F8B4F311ADE914B00884FF7 /* VentureTests */ = {
 			isa = PBXGroup;
 			children = (
+				6F8B4F8C1ADECC9300884FF7 /* Models */,
+				6F8B4F8B1ADECC8F00884FF7 /* Utilities */,
 				6F8B4F341ADE914B00884FF7 /* VentureTests.swift */,
 				6F8B4F321ADE914B00884FF7 /* Supporting Files */,
 			);
@@ -126,7 +139,7 @@
 			children = (
 				6F8B4F7F1ADE9E5000884FF7 /* Models */,
 				6F8B4F801ADE9E8B00884FF7 /* Utilities */,
-				6F8B4F3E1ADE916500884FF7 /* Venture.swift */,
+				6F8B4F3E1ADE916500884FF7 /* Game.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -151,6 +164,31 @@
 				6F8B4F811ADE9E9400884FF7 /* Time.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6F8B4F891ADECB7A00884FF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F8B4F851ADECB7600884FF7 /* Nimble.framework */,
+				6F8B4F861ADECB7600884FF7 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F8B4F8B1ADECC8F00884FF7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6F8B4F8D1ADECCAC00884FF7 /* FunctionsSpec.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6F8B4F8C1ADECC9300884FF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F8B4F8F1ADECDE300884FF7 /* RequirementSpec.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +230,7 @@
 				6F8B4F291ADE914B00884FF7 /* Sources */,
 				6F8B4F2A1ADE914B00884FF7 /* Frameworks */,
 				6F8B4F2B1ADE914B00884FF7 /* Resources */,
+				6F8B4F8A1ADECB8500884FF7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -255,13 +294,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F8B4F8A1ADECB8500884FF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Nimble.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F8B4F1D1ADE914B00884FF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6F8B4F7E1ADE9E4C00884FF7 /* Skill.swift in Sources */,
-				6F8B4F3F1ADE916500884FF7 /* Venture.swift in Sources */,
+				6F8B4F3F1ADE916500884FF7 /* Game.swift in Sources */,
 				6F8B4F841ADE9EF300884FF7 /* Functions.swift in Sources */,
 				6F8B4F7D1ADE9E4C00884FF7 /* Requirement.swift in Sources */,
 				6F8B4F791ADE9E4C00884FF7 /* Character.swift in Sources */,
@@ -276,7 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8B4F8E1ADECCAC00884FF7 /* FunctionsSpec.swift in Sources */,
 				6F8B4F351ADE914B00884FF7 /* VentureTests.swift in Sources */,
+				6F8B4F901ADECDE300884FF7 /* RequirementSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +478,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					/Users/atlas/Development/Games/Venture/Carthage/Build/iOS,
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -436,6 +496,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					/Users/atlas/Development/Games/Venture/Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = VentureTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
