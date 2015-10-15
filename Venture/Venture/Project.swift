@@ -9,15 +9,15 @@ import Foundation
 
 /// Represents a single Project developed within a Company
 public class Project: NSObject {
-    /// Displayed name of the Project
-    var name: String
-    
-    ///  Create a new Project
-    ///
-    ///  :param: name Name of the Project
-    ///
-    ///  :returns: The newly created instance
-    init(name: String) {
-        self.name = name
-    }
+  /// Displayed name of the Project
+  var name: String
+  
+  /// Create a new Project
+  ///
+  /// - parameter name: Name of the Project
+  ///
+  /// - returns: The newly created instance
+  init(name: String) {
+    self.name = name
+  }
 }

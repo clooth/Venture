@@ -7,23 +7,23 @@
 //
 import Quick
 import Nimble
-import Venture
+@testable import Venture
 
 class RequirementSpec: QuickSpec {
-    override func spec() {
-
-        describe("The `Requirement` class") {
-            var requirement: Requirement!
-            
-            beforeEach {
-                requirement = Requirement(name: "Design", requiredPoints: 20)
-            }
-            
-            it("should allow adding points") {
-                requirement.addPoints(5)
-                expect(requirement.gatheredPoints).to(equal(5))
-            }
-        }
-        
+  override func spec() {
+    
+    describe("The `Requirement` class") {
+      var requirement: Requirement!
+      
+      beforeEach {
+        requirement = Requirement(name: "Design", requiredPoints: 20)
+      }
+      
+      it("should allow adding points") {
+        requirement.addPoints(5)
+        expect(requirement.gatheredPoints).to(equal(5))
+      }
     }
+    
+  }
 }

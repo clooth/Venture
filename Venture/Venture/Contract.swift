@@ -9,17 +9,17 @@ import Foundation
 
 /// Represents a single Contract Project developed by a Company
 public class Contract: Project {
-    /// The requirements for this Project
-    var requirements: [Requirement] = []
-    
-    ///  Create a new Contract
-    ///
-    ///  :param: name         Name of the Contract
-    ///  :param: requirements Requirements of the Contract
-    ///
-    ///  :returns: The newly created instance
-    init(name: String, requirements: [Requirement]) {
-        super.init(name: name)
-        self.requirements = requirements
-    }
+  /// The requirements for this Project
+  var requirements: [Requirement] = []
+  
+  /// Create a new Contract
+  ///
+  /// - parameter name:         Name of the Contract
+  /// - parameter requirements: Requirements of the Contract
+  ///
+  /// - returns: The newly created instance
+  init(name: String, requirements: [Requirement]) {
+    super.init(name: name)
+    self.requirements = requirements
+  }
 }

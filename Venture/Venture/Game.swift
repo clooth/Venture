@@ -7,11 +7,10 @@
 //
 import Foundation
 
-
-public class Game: NSObject, Printable {
-    public static let BuildVersion: String = "0.0.1"
-    
-    override public var description: String {
-        return "Venture \(Game.BuildVersion)"
-    }
+public class Game: NSObject {
+  public static let BuildVersion: String = "0.0.1"
+  
+  override public var description: String {
+    return "Venture \(Game.BuildVersion)"
+  }
 }
