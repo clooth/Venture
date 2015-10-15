@@ -213,9 +213,7 @@ public class TimeTicker: NSObject {
     // Increase values and notify listeners
     values[.Day]!++; totalValues[.Day]!++
     tick(.Day)
-    
-    print("Tick. \(values)")
-    
+        
     // Reset days if we're done with this one
     if values[.Day] == 4 {
       values[.Day] = 0
@@ -248,5 +246,11 @@ public class TimeTicker: NSObject {
   /// - parameter timeUnit: The `TimeTickerUnit` to send the events with
   private func tick(timeUnit: TimeTickerUnit) {
     listeners.forEach { $0.timeTickerTick(self, unit: timeUnit) }
+  }
+}
+
+extension TimeTicker {
+  override public var description: String {
+    return "Y\(values[.Year]!) M\(values[.Month]!) W\(values[.Week]!) D\(values[.Day]!)"
   }
 }

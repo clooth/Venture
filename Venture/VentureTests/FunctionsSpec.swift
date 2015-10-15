@@ -10,17 +10,17 @@ import Nimble
 import Venture
 
 class FunctionsSpec: QuickSpec {
-    override func spec() {
-
-        describe("The `delay` function") {
-            it("should delay the execution by a given time") {
-                var value = false
-                delay(0.5) {
-                    value = true
-                }
-                expect(value).toEventually(beTrue())
-            }
+  override func spec() {
+    
+    describe("The `delay` function") {
+      it("should delay the execution by a given time") {
+        var value = false
+        delay(0.5) {
+          value = true
         }
-        
+        expect(value).toEventually(beTrue())
+      }
     }
+    
+  }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FECB361BCF43FC004A99CB /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FECB351BCF43FC004A99CB /* Bond.framework */; };
 		6F8B4F501ADE91AB00884FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F4F1ADE91AB00884FF7 /* AppDelegate.swift */; };
 		6F8B4F521ADE91AB00884FF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F511ADE91AB00884FF7 /* ViewController.swift */; };
 		6F8B4F551ADE91AB00884FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8B4F531ADE91AB00884FF7 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03FECB351BCF43FC004A99CB /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = ../Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
 		6F8B4F4A1ADE91AB00884FF7 /* VentureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VentureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B4F4E1ADE91AB00884FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8B4F4F1ADE91AB00884FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8B4F701ADE91DC00884FF7 /* Venture.framework in Frameworks */,
+				03FECB361BCF43FC004A99CB /* Bond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +86,8 @@
 		6F8B4F4C1ADE91AB00884FF7 /* VentureDemo */ = {
 			isa = PBXGroup;
 			children = (
-				6F8B4F4F1ADE91AB00884FF7 /* AppDelegate.swift */,
 				6F8B4F931ADFEEE100884FF7 /* Controllers */,
 				6F8B4F531ADE91AB00884FF7 /* Main.storyboard */,
-				6F8B4F561ADE91AB00884FF7 /* Images.xcassets */,
-				6F8B4F581ADE91AB00884FF7 /* LaunchScreen.xib */,
 				6F8B4F4D1ADE91AB00884FF7 /* Supporting Files */,
 			);
 			path = VentureDemo;
@@ -96,6 +96,8 @@
 		6F8B4F4D1ADE91AB00884FF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6F8B4F561ADE91AB00884FF7 /* Images.xcassets */,
+				6F8B4F581ADE91AB00884FF7 /* LaunchScreen.xib */,
 				6F8B4F4E1ADE91AB00884FF7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -121,6 +123,7 @@
 		6F8B4F711ADE920B00884FF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03FECB351BCF43FC004A99CB /* Bond.framework */,
 				6F8B4F6F1ADE91DC00884FF7 /* Venture.framework */,
 			);
 			name = Frameworks;
@@ -131,6 +134,7 @@
 			children = (
 				6F8B4F511ADE91AB00884FF7 /* ViewController.swift */,
 				6F8B4F911ADFEEDD00884FF7 /* GameViewController.swift */,
+				6F8B4F4F1ADE91AB00884FF7 /* AppDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +149,7 @@
 				6F8B4F461ADE91AB00884FF7 /* Sources */,
 				6F8B4F471ADE91AB00884FF7 /* Frameworks */,
 				6F8B4F481ADE91AB00884FF7 /* Resources */,
+				03FECB371BCF4402004A99CB /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,7 +185,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = sizeof.io;
 				TargetAttributes = {
 					6F8B4F491ADE91AB00884FF7 = {
@@ -230,6 +235,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03FECB371BCF4402004A99CB /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/Bond.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F8B4F461ADE91AB00884FF7 /* Sources */ = {
@@ -301,6 +324,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -367,10 +391,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/atlas/Development/Games/Venture/Venture/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/../Carthage/**",
 				);
 				INFOPLIST_FILE = VentureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.sizeof.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -381,10 +407,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/atlas/Development/Games/Venture/Venture/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/../Carthage/**",
 				);
 				INFOPLIST_FILE = VentureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.sizeof.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -393,16 +421,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = VentureDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.sizeof.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VentureDemo.app/VentureDemo";
 			};
@@ -412,12 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VentureDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.sizeof.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VentureDemo.app/VentureDemo";
 			};

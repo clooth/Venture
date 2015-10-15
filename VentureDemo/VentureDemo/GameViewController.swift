@@ -8,26 +8,42 @@
 
 import UIKit
 import Venture
+import Bond
 
 class GameViewController: UIViewController {
+  
+  // MARK: Game information
+  
+  @IBOutlet weak var companyNameLabel: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
+  
+  var ticker = TimeTicker()
+  var game = Game()
+  
+  // MARK: View Lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    // MARK: Game information
+    edgesForExtendedLayout = UIRectEdge.None
     
-    @IBOutlet weak var companyNameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    // Time ticker setup
+    ticker.addListener(self)
+    ticker.start()
     
-    // MARK: View Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let player = Character(name: "John Doe", gender: .Male)
-        let company = Company(name: "Corp Inc Ltd.")
-        company.hire(player)
-        
-    }
+    // Demo data
+    let player = Character(name: "John Doe", gender: .Male)
+    let company = Company(name: "Corp Inc Ltd.")
+    company.hire(player)
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+extension GameViewController: TimeTickerListener {
+  func timeTickerTick(timeTicker: TimeTicker, unit: TimeTickerUnit) {
+    dateLabel.text = timeTicker.description
+  }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,8 +18,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venture" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-Cu-2yP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jBf-Cu-2yP" secondAttribute="trailing" id="6bl-Wk-REv"/>
@@ -30,44 +32,11 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <segue destination="RW9-2f-gST" kind="show" id="93z-3E-0Te"/>
-                        <segue destination="AT8-fU-jW0" kind="show" identifier="ShowGameView" id="Sg0-SV-EQf"/>
+                        <segue destination="RW9-2f-gST" kind="show" identifier="ShowGameView" id="93z-3E-0Te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OKc-9b-9wv">
-            <objects>
-                <viewController id="AT8-fU-jW0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nrg-Ck-Nbd"/>
-                        <viewControllerLayoutGuide type="bottom" id="F9t-Er-qnJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JNn-yj-NeW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company: Sunny Studios" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH5-IE-EzC">
-                                <rect key="frame" x="16" y="20" width="568" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clock: Y0 M2 W6 D4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RE-I1-dsF">
-                                <rect key="frame" x="16" y="49" width="568" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GBU-mC-xwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1447" y="232"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="B5c-jL-dap">
@@ -83,55 +52,54 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corp Inc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybl-r3-9jg">
                                 <rect key="frame" x="20" y="20" width="59" height="20"/>
+                                <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="7Sl-mm-01q"/>
-                                    <constraint firstAttribute="height" constant="20" id="91m-lT-PR7"/>
+                                    <constraint firstAttribute="height" constant="20" id="ANs-qp-uWG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y3 M6 W4 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M7-QF-2Xd">
-                                <rect key="frame" x="360" y="20" width="220" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y3 M6 W4 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M7-QF-2Xd">
+                                <rect key="frame" x="508.5" y="20" width="71.5" height="20"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="OYE-X9-n88"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5A-od-GcJ">
-                                <rect key="frame" x="360" y="50" width="220" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Cash: ">
-                                        <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" size="14" name="AvenirNext-DemiBold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="298.4K">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.46576891447368424" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="AvenirNext-DemiBold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash: 298.4K" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5A-od-GcJ">
+                                <rect key="frame" x="492" y="50" width="88" height="20"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vsb-lK-vFQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ybl-r3-9jg" firstAttribute="leading" secondItem="H1O-0P-t3E" secondAttribute="leading" constant="20" id="14Y-jb-NqK"/>
-                            <constraint firstItem="ybl-r3-9jg" firstAttribute="top" secondItem="Mlg-WT-Gi7" secondAttribute="bottom" constant="20" id="fSc-pW-cOf"/>
+                            <constraint firstItem="ybl-r3-9jg" firstAttribute="leading" secondItem="H1O-0P-t3E" secondAttribute="leading" constant="20" id="1Bz-Bw-Vo4"/>
+                            <constraint firstAttribute="trailing" secondItem="B5A-od-GcJ" secondAttribute="trailing" constant="20" id="AxV-St-QSA"/>
+                            <constraint firstAttribute="trailing" secondItem="4M7-QF-2Xd" secondAttribute="trailing" constant="20" id="Szx-kD-1bw"/>
+                            <constraint firstItem="ybl-r3-9jg" firstAttribute="top" secondItem="Mlg-WT-Gi7" secondAttribute="bottom" constant="20" id="ZDZ-S5-15l"/>
+                            <constraint firstItem="B5A-od-GcJ" firstAttribute="top" secondItem="4M7-QF-2Xd" secondAttribute="bottom" constant="10" id="bsT-qO-jWl"/>
+                            <constraint firstItem="4M7-QF-2Xd" firstAttribute="top" secondItem="Mlg-WT-Gi7" secondAttribute="bottom" constant="20" id="gFB-fw-iyi"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="companyNameLabel" destination="ybl-r3-9jg" id="Dmx-u9-enT"/>
-                        <outlet property="dateLabel" destination="4M7-QF-2Xd" id="BIn-4L-Ev7"/>
+                        <outlet property="companyNameLabel" destination="ybl-r3-9jg" id="Odq-xd-Z7e"/>
+                        <outlet property="dateLabel" destination="4M7-QF-2Xd" id="5F8-8X-o5D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8S-C5-mG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="1040"/>
+            <point key="canvasLocation" x="1300" y="357"/>
         </scene>
     </scenes>
     <resources>
