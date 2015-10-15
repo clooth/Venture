@@ -23,6 +23,7 @@
 		6F8B4F881ADECB7600884FF7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B4F861ADECB7600884FF7 /* Quick.framework */; };
 		6F8B4F8E1ADECCAC00884FF7 /* FunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F8D1ADECCAC00884FF7 /* FunctionsSpec.swift */; };
 		6F8B4F901ADECDE300884FF7 /* RequirementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F8F1ADECDE300884FF7 /* RequirementSpec.swift */; };
+		6F8B4F951AE050FE00884FF7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4F941AE050FE00884FF7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		6F8B4F861ADECB7600884FF7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		6F8B4F8D1ADECCAC00884FF7 /* FunctionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsSpec.swift; sourceTree = "<group>"; };
 		6F8B4F8F1ADECDE300884FF7 /* RequirementSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequirementSpec.swift; sourceTree = "<group>"; };
+		6F8B4F941AE050FE00884FF7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		6F8B4F801ADE9E8B00884FF7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6F8B4F941AE050FE00884FF7 /* Extensions.swift */,
 				6F8B4F831ADE9EF300884FF7 /* Functions.swift */,
 				6F8B4F811ADE9E9400884FF7 /* Time.swift */,
 			);
@@ -248,6 +251,8 @@
 		6F8B4F191ADE914B00884FF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = sizeof.io;
 				TargetAttributes = {
@@ -322,6 +327,7 @@
 				6F8B4F841ADE9EF300884FF7 /* Functions.swift in Sources */,
 				6F8B4F7D1ADE9E4C00884FF7 /* Requirement.swift in Sources */,
 				6F8B4F791ADE9E4C00884FF7 /* Character.swift in Sources */,
+				6F8B4F951AE050FE00884FF7 /* Extensions.swift in Sources */,
 				6F8B4F821ADE9E9400884FF7 /* Time.swift in Sources */,
 				6F8B4F7A1ADE9E4C00884FF7 /* Company.swift in Sources */,
 				6F8B4F7C1ADE9E4C00884FF7 /* Project.swift in Sources */,
@@ -476,9 +482,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					/Users/atlas/Development/Games/Venture/Carthage/Build/iOS,
+					"$(PROJECT_DIR)/../Carthage/**",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -494,9 +499,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					/Users/atlas/Development/Games/Venture/Carthage/Build/iOS,
+					"$(PROJECT_DIR)/../Carthage/**",
 				);
 				INFOPLIST_FILE = VentureTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -523,6 +527,7 @@
 				6F8B4F3A1ADE914B00884FF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F8B4F3B1ADE914B00884FF7 /* Build configuration list for PBXNativeTarget "VentureTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +536,7 @@
 				6F8B4F3D1ADE914B00884FF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
