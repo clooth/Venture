@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Bond
 
 /// Represents a single Company where people work on Projects and Contracts
 public class Company: NSObject {
   /// The name of the Company
-  public var name: String
+  public var name = Observable("")
   
   /// The Staff working at the Company
   var staff: [Character] = []
@@ -36,7 +37,7 @@ public class Company: NSObject {
   ///
   /// - returns: The newly created instance
   public init(name: String) {
-    self.name = name
+    self.name.next(name)
   }
   
   // MARK: Hiring

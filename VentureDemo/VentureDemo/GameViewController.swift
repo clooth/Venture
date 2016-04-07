@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
   @IBOutlet weak var companyNameLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
   
-  var ticker = TimeTicker()
+  var ticker = Observable(TimeTicker)
   var game = Game()
   
   // MARK: View Lifecycle
@@ -26,24 +26,18 @@ class GameViewController: UIViewController {
     super.viewDidLoad()
     
     edgesForExtendedLayout = UIRectEdge.None
-    
-    // Time ticker setup
-    ticker.addListener(self)
-    ticker.start()
-    
+        
     // Demo data
     let player = Character(name: "John Doe", gender: .Male)
     let company = Company(name: "Corp Inc Ltd.")
     company.hire(player)
+    
+    company.name.observe { name in
+      self.companyNameLabel.text = name
+    }
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-  }
-}
-
-extension GameViewController: TimeTickerListener {
-  func timeTickerTick(timeTicker: TimeTicker, unit: TimeTickerUnit) {
-    dateLabel.text = timeTicker.description
   }
 }

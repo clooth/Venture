@@ -154,16 +154,16 @@ public class TimeTicker: NSObject {
   public var secondsPerDay: Double = 1
   
   /// The `TimeTickerListener` objects listening to every tick this `TimeTicker` ticks.
-  private var listeners: [TimeTickerListener] = []
+  public private(set) var listeners: [TimeTickerListener] = []
   
   /// Current time ticker unit values
-  private var values: [TimeTickerUnit: Int] = [.Day: 0, .Week: 0, .Month: 0, .Year: 0]
+  public private(set) var values: [TimeTickerUnit: Int] = [.Day: 0, .Week: 0, .Month: 0, .Year: 0]
   
   /// Total number of days ticked
-  private var totalValues: [TimeTickerUnit: Int] = [.Day: 0, .Week: 0, .Month: 0, .Year: 0]
+  public private(set) var totalValues: [TimeTickerUnit: Int] = [.Day: 0, .Week: 0, .Month: 0, .Year: 0]
   
   /// Whether or not the ticker should keep running
-  private var running: Bool = false
+  public private(set) var running: Bool = false
   
   // MARK: Initializers
   
@@ -215,7 +215,7 @@ public class TimeTicker: NSObject {
     tick(.Day)
         
     // Reset days if we're done with this one
-    if values[.Day] == 4 {
+    if values[.Day] == 7 {
       values[.Day] = 0
       values[.Week]!++
       tick(.Week)
@@ -246,11 +246,5 @@ public class TimeTicker: NSObject {
   /// - parameter timeUnit: The `TimeTickerUnit` to send the events with
   private func tick(timeUnit: TimeTickerUnit) {
     listeners.forEach { $0.timeTickerTick(self, unit: timeUnit) }
-  }
-}
-
-extension TimeTicker {
-  override public var description: String {
-    return "Y\(values[.Year]!) M\(values[.Month]!) W\(values[.Week]!) D\(values[.Day]!)"
   }
 }
